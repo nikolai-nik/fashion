@@ -40,6 +40,7 @@ img {
   display: block;
   height: auto;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 .site-header {
@@ -232,17 +233,17 @@ img {
 	&__icon {
 		position: absolute;
 		display: block;
-		width: 45px;
+		width: 30px;
 		height: 35px;
 		top: 10px;
-		right: 10px;
+		right: 30px;
 		cursor: pointer;
 		z-index: 2;
 
 		span {
 			display: block;
 			position: absolute;
-			height: 9px;
+			height: 5px;
 			width: 100%;
 			background: #333333;
 			border-radius: 9px;
@@ -402,119 +403,112 @@ img {
 
 	}
 
-	/*@media screen and (max-width: 768px) {
-		.main-menu__icon {
-			display: block;
-		}
-	}*/
 
 }
 
 
-@media screen and (max-width: 768px) {
-/*  .menu__icon{
-    display: inline-block;
-  }
-  
-  .menu__links {
-    position: fixed;
-    display: block;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin-top: 52px;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    overflow: auto;
-    opacity: 0;
-
-  }
-  
-  .menu__links-item {
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    color: #ffffff;
-  }*/
-}
 /***********************/
 .home-section {
-	margin-bottom: 30px;
-}
-.site-content {
-	.item1 {
-		max-width: 450px;
-		max-height: 600px;
-		.item1_info{
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			h1 {
-				font-weight: bold;
-				text-transform: uppercase;
-				background: #ffffff;
-				margin: 0 30px 10px 20px;
-				@media (max-width: 998px) {
-					font-size: 20px;
-					@media (max-width:578px) {
-					padding-bottom: 30px;
-				}
-			
-				}
-				
-			}
-			h2 {
-				font-size: 14px;
-				text-transform: uppercase;
-				padding-bottom: 40px;
-				padding-left: 20px;
-
+	.row {
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			padding:15px;
+			box-sizing: inherit;
+			ul {
+				list-style: none;
+				margin: 0;
 			}
 		}
 	}
 	.item2 {
-		display: flex;
-		max-width: 450px;
-		max-height: 600px;
-		.item2_left {
-			display: flex;
-			flex-flow: column;
-			height: 100%;
-			.item2_left_top {
-				margin-bottom: 30px;
-				max-height: 285px;
-			}
-			.item2_left_botom {
-				max-height: 285px;
-			}
-		}
-		.item2_right {
-			display: flex;
-			flex-flow: column;
-			height: 100%;
-			.item2_right_top {
-				max-height: 285px;
-				margin-bottom: 30px;
-				padding-left: 0;
-			}
-			.item2_right_botom {
-				max-height: 285px;
-			}
-		}
-
-
+		@media (max-width: 768px) {
+			width: 50%;
+			float: left;
 		
+		}
+	}
+	.flex-inner {
+		li {
+			padding: 0;
+		}
+	}
+	.item1_info {
+		position: absolute;
+		bottom:20px;
+		left: 30px;
+		h1 {
+			display: inline-block;
+			background: #ffffff;
+			font-size: 30px;
+			font-weight: bold;
+			margin-bottom: 10px;
+			@media (max-width: 989px) {
+				font-size: 20px;
+			}
+		}
+	}
+	.item2_info {
+		position: absolute;
+		bottom: 20px;
+		left: 15px;
+		@media (max-width: 989px) {
+			bottom: 0;
+		}
+		h2 {
+			line-height: 30px;
+		}
+
+	}
+	.accubuttons {
+		position: absolute;
+		bottom: 55px;
+		right: 10px;
+		@media (max-width: 989px) {
+			bottom: 85px;
+			left: 15px;
+		}
+	}
+	.item2_left_top {
+		padding-bottom: 15px;
+
+	}
+	.item2_right_top {
+		padding-bottom: 15px;
+		box-sizing: inherit;
+		.item2_info {
+			padding-bottom: 15px;
+		}
+
+	}
+	.item2_left_botom {
+		padding-top: 15px;
 		.accubuttons {
-			position: absolute;
-			bottom: 30px;
-			right: 30px;
+			bottom: 40px;
+			@media (max-width: 989px) {
+				bottom: 70px;
+			}
 		}
-		
+	}
+	.item2_right_botom {
+		padding-top: 15px;
+		.accubuttons {
+			bottom: 40px;
+			@media (max-width: 989px) {
+				bottom: 70px;
+			}
+		}
+	}
+
+	.tilter {
+		position: relative;
+		display: block;
 	}
 	.item3 {
 		.item3_left {
 			width: 100%;
-			.item1_info {
+			.item1_info1 {
 				position: absolute;
 				top: 0;
 				h2 {
@@ -551,7 +545,7 @@ img {
 		}
 		.item3_center {
 
-			.item2_info {
+			.item2_info2 {
 				position: absolute;
 				bottom: 50%;
 				left: 30px;
@@ -568,7 +562,7 @@ img {
 		}
 		.item3_right {
 
-			.item2_info {
+			.item2_info2 {
 				position: absolute;
 				bottom: 50%;
 				left: 30px;
