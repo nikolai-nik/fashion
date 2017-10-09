@@ -9,8 +9,21 @@
 
 			$parent.toggleClass( 'menu_state_open' );
    	 	});
-   	 	$('.parallax-window').parallax({imageSrc: 'assets/images/13025752_01_D3.jpg'});
+   	 	
+   	 	$('div[data-type="background"]').each(function(){
+    	var $bgobj = $(this);
 
+ 		$( window ).scroll( function() {
+        	var yPos = -( $( window ).scrollTop() / $bgobj.data('speed')); 
+        	var coords = '50% '+ yPos + 'px';
+     
+        	$bgobj.css({ backgroundPosition: coords });
+    	} ); 
+
+	});// end ready
 	})
 
-})(jQuery);
+
+})
+
+(jQuery);
