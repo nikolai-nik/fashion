@@ -19,6 +19,7 @@
 
 		<script src="assets/js/site-scripts.js"></script>
 		<script src="assets/js/parallax.min.js"></script>
+		<script type="text/javascript" src="assets/js/jquery.downCount.js"></script>
 	</head>
 	<body class="home-page">
 		<div class="site">
@@ -335,7 +336,7 @@
 						<ul class="row">
 							<div id="htmlcontent_top">
     							<ul class="htmlcontent-home clearfix row">
-              						<li class="htmlcontent-item-1  col-xl-2 col-lg-3 col-md-12 col-sm-12">
+              						<li class="htmlcontent-item-1  col-xl-2 col-lg-2 col-md-12 col-sm-12">
                                         <div class="item-html">
                                         	<h2>shop by category</h2>
               								<ul>
@@ -343,7 +344,7 @@
               									</li>
               									<li><a href="#">sweaters</a>
               									</li>
-              									<li><a href="#">Thermostats & HVAC</a>
+              									<li><a href="#">HVAC</a>
               									</li>
               									<li><a href="#">jackets</a>
               									</li>
@@ -353,24 +354,52 @@
               									</li>
             							</div>
                  					</li>
-              						<li class="htmlcontent-item-2  col-xl-7 col-lg-6 col-md-8 col-sm-12">
-                      					<a href="index.php?id_category=13&amp;controller=category" class="item-link" title="">
+              						<li class="htmlcontent-item-2  col-xl-7 col-lg-7 col-md-8 col-sm-12">
                                 			<img src="assets/images/images/01_home_new_03.jpg" class="item-img">
                                          	<div class="item-html">
-												
-												<h3>Everything you need</h3>
-												<p>for your perfect skin</p>
+												<ul class="countdown">
+													<li>
+														<span class="days">00</span>
+														<p class="days_ref">days</p>
+													</li>
+														<p class="seperator">:</p>
+													<li> 
+														<span class="hours">00</span>
+														<p class="hours_ref">hours</p>
+													</li>
+														<p class="seperator">:</p>
+													<li> <span class="minutes">00</span>
+														<p class="minutes_ref">min</p>
+													</li>
+														<p class="seperator">:</p>
+													<li> <span class="seconds">00</span>
+														<p class="seconds_ref">sec</p>
+													</li>
+												</ul>
+												<div class="countdown_info">
+													<h2>super sale!</h2>
+													<h1>more than 300 selected models</h1>
+													<h3>$39.99</h3>
+													<div class="countdown_info1">
+														<p>Why Choose a Smart Thermostat?</p>
+														<div class="button">
+														<a href="#" class="button-primary">shop now</a>
+													</div>
+													</div>
             								</div>
                                 		</a>
                   					</li>
               						<li class="htmlcontent-item-3 col-xl-3 col-lg-3 col-md-4 col-sm-12">
-                      					<a href="index.php?id_category=19&amp;controller=category" class="item-link" title="">
-                                			<img src="assets/images/images/01_home_new_06.jpg" class="item-img";
+                                			<img src="assets/images/Leather-Look Mini Backpack 6.jpg" class="item-img">
                                          	<div class="item-html">
-              									<h3>Find hard-to-fi</h3>
-												<p>medicine you nee</p>
+              									<h3>deal of the week</h3>
+												<h4>Leather-Look Mini Backpack</h4>
+												<span class="off">$99.99</span><span class="on">$89.99</span>
+												<div class="button">
+												<a href="#" class="button-primary">shop now</a>
+												</div>
            								 	</div>
-                               			</a>
+                               				</a>
                   					</li>
           						</ul>
 							</div>
@@ -378,7 +407,19 @@
 					</div>
 
 				</section>
+				<section class="section section2">
+					
+				</section>
 			</main>
 		</div>	
+		<script class="source" type="text/javascript">
+			$('.countdown').downCount({
+			<a href="http://www.jqueryscript.net/time-clock/">date</a>: '10/11/2017 12:00:00',
+			offset: +10
+			}, function () {
+			alert('WOOT WOOT, done!');
+			});
+			</script>
+
 	</body>
 </html>
