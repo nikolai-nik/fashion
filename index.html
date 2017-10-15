@@ -938,6 +938,8 @@
 						</div>
 					</div>
 				</footer>
+					<a href="#" id="ui-to-top" class="ui-to-top fa fa-chevron-up active"></a>
+
 			</main>
 		</div>	
 		<script class="source" type="text/javascript">
@@ -947,7 +949,25 @@
 			}, function () {
 			alert('WOOT WOOT, done!');
 			});
-			</script>
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			 
+			$(window).scroll(function(){
+			if ($(this).scrollTop() > 100) {
+			$('.ui-to-top').fadeIn();
+			} else {
+			$('.ui-to-top').fadeOut();
+			}
+			});
+			 
+			$('.ui-to-top').click(function(){
+			$("html, body").animate({ scrollTop: 0 }, 600);
+			return false;
+			});
+			 
+			});
+		</script>
 
 	</body>
 </html>
