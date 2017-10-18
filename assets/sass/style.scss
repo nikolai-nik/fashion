@@ -53,6 +53,7 @@ p {
 .site-top {
 	font-size: 11px;
 	color: #000;
+	padding: 0;
 	.row {
 		@media (max-width: 768px) {
 			display: flex;
@@ -489,6 +490,10 @@ p {
 	}
 	.item2_left_botom {
 		padding-top: 15px;
+		.box {
+			padding-bottom: 35%;
+			background: #000;
+		}
 		.accubuttons {
 			bottom: 40px;
 			@media (max-width: 989px) {
@@ -598,7 +603,7 @@ p {
             	}
             	span {
             		float: right;
-            		margin-left: -40px;
+            		margin-left: -20px;
             		color: #ffffff;
     			}
             }
@@ -666,9 +671,12 @@ p {
 	width: 100%;
 	height: 500px;
 	position: relative;
-	background: url( '../images/images/01_home_new_02.jpg') no-repeat center top fixed;
-	background-size: cover;
+	background: url( '../images/images/01_home_new_02.jpg') no-repeat center center fixed;
+	background-size: contain;
 	z-index: 0;
+	@media (max-width: 789px) {
+					height: 300px;
+			}
 	.page_header {
 		display: flex;
 		flex-flow: column;
@@ -681,8 +689,9 @@ p {
 			font-weight: bold;
 			text-transform: uppercase;
 			padding: 150px 0 30px 0;
-			@media (max-width: 570px) {
+			@media (max-width: 789px) {
 				font-size: 14px;
+				padding: 50px 0 30px 0;
 			}
 		}
 		.infotext2 {
@@ -695,7 +704,7 @@ p {
 				font-size: 50px;
 				@media (max-width: 996px) {
 					font-size: 40px;
-					@media (max-width: 769px) {
+					@media (max-width: 789px) {
 						font-size: 30px;
 						@media (max-width: 570px) {
 							font-size: 25px;
@@ -708,7 +717,7 @@ p {
 			font-size: 18px;
 			padding: 20px 40px 20px 40px;
 			list-style: none;
-			@media (max-width: 570px) {
+			@media (max-width: 789px) {
 				font-size: 14px;
 				padding: 10px 20px 10px 20px;
 			}
@@ -767,6 +776,8 @@ p {
 				align-content: center;
 				padding-right: 15px;
 				@media (max-width: 576px) {
+					font-size: 10px;
+					padding-right: 10px;
 				}
 				a {
 					color: #444;
@@ -991,6 +1002,9 @@ p {
 			padding: 0 10px 0 10px;
 		}
 	}
+	.lazy:hover  img {
+		transform: scale(1.1);
+	}
 	.button-group {
 		position: absolute;
 	    text-align: center;
@@ -1174,6 +1188,7 @@ p {
 	}
 
 }
+
 footer {
 	background: #000;
 	color: #ffffff;
@@ -1263,6 +1278,219 @@ footer {
 }
 
 /******************/
+#content {
+	p {
+		color: #000;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	h3 {
+		font-size: 20px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	hr {
+		margin: 10px 0;
+		border-top: 1px solid #eee;
+	}
+	.product-filter {
+		display: flex;
+		border: 1px solid #e7e7e7;
+		margin: 10px 0 40px 0;
+		align-items: center;
+		.show {
+			color: #000;
+			.btn-group {
+				border-radius: 0;
+				.btn {
+					border-radius: 0;
+					width: 65px;
+					background: #fff;
+				}
+				.dropdown-menu{
+					border-radius: 0;
+					min-width: 65px;
+					padding: 0;
+					margin: 0;
+					a {
+						padding: 0 16px;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+	.product-layout {
+		border-right: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		margin: 20px 0 20px 0;
+			@media (max-width: 579px) {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+			}
+		.lazy {
+			.sale {
+				position: absolute;
+				color: #fff;
+				background: red;
+				display: inline-block;
+				font-size: 10px;
+				line-height: 15px;
+				float: top;
+
+			}
+		}
+		.lazy:hover  img {
+			transform: scale(1.1);
+		}
+		.button-group {
+			position: absolute;
+		    text-align: center;
+		    right: 0;
+		    left: 0;
+		    top: 45%;
+		    display: inline-block;
+		    opacity: 0;
+		    transition: all 1s ease;
+		    	@media (max-width: 579px) {
+
+	    		}
+
+	    	.btn {
+		    	padding: 5px 10px 5px 10px;
+		    	background: #ffffff;
+		    	border: solid 1px #000;
+		    	border-radius: 0;
+		    	cursor: pointer;
+		    	transition: all 1s ease;
+		    		@media (max-width: 579px) {
+		    			padding: 2px 7px 2px 7px;
+		    		}
+	    		i {
+	    			font-size: 12px;
+	    		}
+	    	}
+	    	.btn:hover {
+	    		color: #ffffff;
+	    		background: #000;
+	    	}
+		}
+		.button-group:hover {
+			opacity: 1;
+		}
+		.img-primary {
+			width: auto;
+		}
+		.caption {
+			display: flex;
+			flex-flow: column;
+			.info {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				a {
+					font-size: 11px;
+					line-height: 20px;
+					text-transform: uppercase;
+					font-weight: bold;
+					color: #000;
+					text-decoration: none;
+				}
+				a:hover {
+					color: #ffb400;
+				}
+			}
+			.price {
+				display: flex;
+				justify-content: space-around;
+				span {
+					font-size: 14px;
+					font-weight: bold;
+					color: #000;
+				}
+				.price-old {
+					text-decoration: line-through;
+				}
+				.discount {
+					span {
+						color: red;
+					}
+				}
+			}
+			.description {
+				display: none;
+			}
+		}
+	}
+	.product-list {
+		padding: 20px 15px;
+		width: 100%;
+		display: flex;
+		border: none;
+		border-bottom: 1px solid #ddd;
+		margin: 0;
+		.product-thumb {
+			display: flex;
+			.image {
+				width:30%;
+				img {
+					width: 100%;
+				}
+				.button-group {
+					position: relative;
+					opacity: 1;
+
+				}
+			}
+			.caption {
+				width:70%;
+				display: flex;
+				justify-content: flex-start;
+				.description {
+					display: flex;
+					font-size: 12px;
+					line-height: 20px;
+				}
+				.price {
+					justify-content: flex-start;
+					span {
+						padding-right: 20px;
+					}
+				}
+				.info {
+					flex-flow: row nowrap;
+					a {
+						padding-right: 20px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+.breadgrumb {
+	list-style: none;
+	display: flex;
+	border: 1px solid #e7e7e7;
+	padding: 10px 15px;
+	margin: 15px 0 40px 0;
+
+	li {
+		position: relative;
+		font-size: 10px;
+		padding-right: 10px;
+		a {
+			color: #7a7f84;
+
+		}
+	}
+	span {
+		font-size: 10px;
+		text-transform: capitalize;
+	}
+}
 .button-primary {
 	font-size: 10px;
 	padding: 10px;
@@ -1298,28 +1526,29 @@ footer {
 .bottom_top {
 	a {
 		text-decoration: none;
+	
 	}
-}
-.ui-to-top {
-    width: 38px;
-    height: 38px;
-    font-size: 16px;
-    line-height: 33px;
-    background: #fff;
-    color: #000;
-    border-radius: 0;
-    position: fixed;
-    right: 26px;
-    bottom: 65px;
-    overflow: hidden;
-    text-align: center;
-    list-style: none;
-    z-index: 20;
-    border: 1px solid #000;
-}
-.ui-to-top:active {
- 	background: #000;
- 	color: #fff;
+	.ui-to-top {
+	    width: 38px;
+	    height: 38px;
+	    font-size: 16px;
+	    line-height: 33px;
+	    background: #fff;
+	    color: #000;
+	    border-radius: 0;
+	    position: fixed;
+	    right: 10%;
+	    bottom: 65px;
+	    overflow: hidden;
+	    text-align: center;
+	    list-style: none;
+	    z-index: 20;
+	    border: 1px solid #000;
+	}
+	.ui-to-top:active {
+	 	background: #000;
+	 	color: #fff;
 
+	}
 }
 

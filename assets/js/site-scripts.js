@@ -21,11 +21,11 @@
 			} );
 
 		});
-
+		///////// timer
 		var countdown = $('.countdown');
 
 		countdown.downCount( {
-			date: '10/16/2017 14:19:00',
+			date: '10/19/2017 14:19:00',
 			offset: +3
 		}, function () {
 		} );
@@ -45,7 +45,9 @@
 			return false;
 
 		} )
+		//////////
 
+		///////// knopka button -top
 		$(window).scroll(function(){
 			if ($(this).scrollTop() > 100) {
 				$('.ui-to-top').fadeIn();
@@ -59,6 +61,44 @@
 			$("html, body").animate({ scrollTop: 0 }, 600);
 			return false;
 		});
+		////////////
+
+
+			
+			// Product Grid
+		$('#grid-view').click(function() {
+			// What a shame bootstrap does not take into account dynamically loaded columns
+			var cols = $('#column-right, #column-left').length;
+			$(this).addClass('active');
+			$('#list-view').removeClass('active');
+			if (cols == 2) {
+				$('#content .product-list').attr('class', 'product-layout product-grid col-lg-6 col-md-6 col-sm-12 col-xs-12');
+			} else if (cols == 1) {
+				$('#content .product-list').attr('class', 'product-layout product-grid col-lg-4 col-md-4 col-sm-6 col-xs-12');
+			} else {
+				$('#content .product-list').attr('class', 'product-layout product-grid col-lg-2 col-md-3 col-sm-6 col-xs-12');
+			}
+
+			
+		});
+		
+
+		// Product List
+		$('#list-view').click(function() {
+			$('#content .product-grid > .clearfix').remove();
+			$(this).addClass('active');
+			$('#grid-view').removeClass('active');
+			$('#content .product-layout').attr('class', 'product-layout product-list col-xs-12');
+
+			
+		});
+		/////////////
+		
+		$('#content #btnGroupDrop1').click(function(){
+			$(this).siblings(".dropdown-menu") .toggle();
+		    	
+		})
+		
 	});// end ready
 
 })( jQuery );
