@@ -96,7 +96,6 @@
 		
 		$('#content #btnGroupDrop1').click(function(){
 			$(this).siblings(".dropdown-menu") .toggle();
-		    	
 		})
 		
 	});// end ready
