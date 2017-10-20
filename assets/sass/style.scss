@@ -673,10 +673,10 @@ p {
 	height: 500px;
 	position: relative;
 	background: url( '../images/images/01_home_new_02.jpg') no-repeat center center fixed;
-	background-size: contain;
 	z-index: 0;
 	@media (max-width: 789px) {
 					height: 300px;
+
 			}
 	.page_header {
 		display: flex;
@@ -1006,6 +1006,9 @@ p {
 	.lazy:hover  img {
 		transform: scale(1.1);
 	}
+	.lazy:hover + .button-group {
+			opacity: 1;
+	}
 	.button-group {
 		position: absolute;
 	    text-align: center;
@@ -1016,9 +1019,6 @@ p {
 	    display: inline-block;
 	    opacity: 0;
 	    transition: all 1s ease;
-	    @media (max-width: 579px) {
-
-	    	}
 
 	    .btn {
 	    	padding: 5px 10px 5px 10px;
@@ -1291,8 +1291,17 @@ p {
 		}
 		textarea {
 			width: 100%;
-			max-height: 200px;
+			min-height: 200px;
 			border: 2px solid #000;
+		}
+	}
+	.accubuttons {
+		padding: 10px 0 30px 0;
+		display: flex;
+		justify-content: flex-end;
+		a {
+			padding: 10px 50px;
+			font-weight: bold;
 		}
 	}
 }
@@ -1401,32 +1410,66 @@ footer {
 		margin: 10px 0;
 		border-top: 1px solid #eee;
 	}
-	.product-filter {
+	.product-filter_elem {
 		display: flex;
-		border: 1px solid #e7e7e7;
+		justify-content: space-between;
 		margin: 10px 0 40px 0;
 		align-items: center;
-		.show {
-			color: #000;
-			.btn-group {
-				border-radius: 0;
-				.btn {
-					border-radius: 0;
-					width: 65px;
-					background: #fff;
-				}
-				.dropdown-menu{
-					border-radius: 0;
-					min-width: 65px;
-					padding: 0;
-					margin: 0;
-					a {
-						padding: 0 16px;
-						text-align: left;
-					}
-				}
+		@media (max-width: 500px){
+			flex-flow: column;
+		}
+		.holder {
+			border: 1px solid #727272;
+			@media (max-width: 500px){
+				margin: 15px 0;
 			}
 		}
+
+		.holder a {
+			font-size: 16px;
+			cursor: pointer;
+			margin: 0 5px;
+			color: #333;
+			font-weight: bold;
+		}
+
+		.holder a:hover {
+			background-color: #222;
+			color: #fff;
+		}
+
+		.holder a.jp-previous { margin-right: 15px; }
+		.holder a.jp-next { margin-left: 15px; }
+
+		.holder a.jp-current, a.jp-current:hover { 
+			color: #FF4242;
+			font-weight: bold;
+		}
+
+		.holder a.jp-disabled, a.jp-disabled:hover {
+			color: #bbb;
+		}
+
+		.holder a.jp-current, a.jp-current:hover,
+		.holder a.jp-disabled, a.jp-disabled:hover {
+			cursor: default; 
+			background: none;
+		}
+
+		.holder span { margin: 0 5px; 
+		}
+		form {
+			label {
+				font-size: 12px;
+				color: #000;
+				padding-left: 20px;
+			}
+			select {
+					font-size: 12px;
+					padding: 9px 0;
+				}
+		}
+		
 	}
 	.product-layout {
 		border-right: 1px solid #ddd;
@@ -1451,6 +1494,10 @@ footer {
 		}
 		.lazy:hover  img {
 			transform: scale(1.1);
+			transition: all 1s ease;
+		}
+		.lazy:hover + .button-group{
+			opacity: 1;
 		}
 		.button-group {
 			position: absolute;
@@ -1487,6 +1534,7 @@ footer {
 		.button-group:hover {
 			opacity: 1;
 		}
+
 		.img-primary {
 			width: auto;
 		}

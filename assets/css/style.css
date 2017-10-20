@@ -668,7 +668,6 @@ p {
   height: 500px;
   position: relative;
   background: url("../images/images/01_home_new_02.jpg") no-repeat center center fixed;
-  background-size: contain;
   z-index: 0; }
   @media (max-width: 789px) {
     .paralax-section {
@@ -997,6 +996,9 @@ p {
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
 
+.section-2 .lazy:hover + .button-group {
+  opacity: 1; }
+
 .section-2 .button-group {
   position: absolute;
   text-align: center;
@@ -1286,8 +1288,22 @@ p {
 
 .section-contact .message textarea {
   width: 100%;
-  max-height: 200px;
+  min-height: 200px;
   border: 2px solid #000; }
+
+.section-contact .accubuttons {
+  padding: 10px 0 30px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .section-contact .accubuttons a {
+    padding: 10px 50px;
+    font-weight: bold; }
 
 footer {
   background: #000;
@@ -1388,33 +1404,63 @@ footer {
   margin: 10px 0;
   border-top: 1px solid #eee; }
 
-#content .product-filter {
+#content .product-filter_elem {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #e7e7e7;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 10px 0 40px 0;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-  #content .product-filter .show {
-    color: #000; }
-    #content .product-filter .show .btn-group {
-      border-radius: 0; }
-      #content .product-filter .show .btn-group .btn {
-        border-radius: 0;
-        width: 65px;
-        background: #fff; }
-      #content .product-filter .show .btn-group .dropdown-menu {
-        border-radius: 0;
-        min-width: 65px;
-        padding: 0;
-        margin: 0; }
-        #content .product-filter .show .btn-group .dropdown-menu a {
-          padding: 0 16px;
-          text-align: left; }
+  @media (max-width: 500px) {
+    #content .product-filter_elem {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column; } }
+  #content .product-filter_elem .holder {
+    border: 1px solid #727272; }
+    @media (max-width: 500px) {
+      #content .product-filter_elem .holder {
+        margin: 15px 0; } }
+  #content .product-filter_elem .holder a {
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+    font-weight: bold; }
+  #content .product-filter_elem .holder a:hover {
+    background-color: #222;
+    color: #fff; }
+  #content .product-filter_elem .holder a.jp-previous {
+    margin-right: 15px; }
+  #content .product-filter_elem .holder a.jp-next {
+    margin-left: 15px; }
+  #content .product-filter_elem .holder a.jp-current, #content .product-filter_elem a.jp-current:hover {
+    color: #FF4242;
+    font-weight: bold; }
+  #content .product-filter_elem .holder a.jp-disabled, #content .product-filter_elem a.jp-disabled:hover {
+    color: #bbb; }
+  #content .product-filter_elem .holder a.jp-current, #content .product-filter_elem a.jp-current:hover,
+  #content .product-filter_elem .holder a.jp-disabled, #content .product-filter_elem a.jp-disabled:hover {
+    cursor: default;
+    background: none; }
+  #content .product-filter_elem .holder span {
+    margin: 0 5px; }
+  #content .product-filter_elem form label {
+    font-size: 12px;
+    color: #000;
+    padding-left: 20px; }
+  #content .product-filter_elem form select {
+    font-size: 12px;
+    padding: 9px 0; }
 
 #content .product-layout {
   border-right: 1px solid #ddd;
@@ -1442,7 +1488,12 @@ footer {
   #content .product-layout .lazy:hover img {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    transform: scale(1.1); }
+    transform: scale(1.1);
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+  #content .product-layout .lazy:hover + .button-group {
+    opacity: 1; }
   #content .product-layout .button-group {
     position: absolute;
     text-align: center;

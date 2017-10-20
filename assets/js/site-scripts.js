@@ -92,12 +92,24 @@
 
 			
 		});
-		/////////////
-		
-		$('#content #btnGroupDrop1').click(function(){
-			$(this).siblings(".dropdown-menu") .toggle();
-		})
-		
+		//////////////// Pagination
+		$("div.holder").jPages({
+	      containerID : "itemContainer",
+	      perPage : 6
+	    });
+
+	    /* on select change */
+	    $("select").change(function(){
+	      /* get new nº of items per page */
+	      var newPerPage = parseInt( $(this).val() );
+
+	      /* destroy jPages and initiate plugin again */
+	      $("div.holder").jPages("destroy").jPages({
+	        containerID   : "itemContainer",
+	        perPage       : newPerPage
+	      });
+	    });
+		/////////////////////
 	});// end ready
 
 })( jQuery );
