@@ -110,6 +110,18 @@
 	      });
 	    });
 		/////////////////////
+
+			//////////код выравнивания блоков
+		$('.container').each(function(){
+        var highestBox = 0;
+        $('.items ', this).each(function(){
+            if($(this).height() > highestBox) {
+                highestBox = $(this).height();
+            }
+        });
+       	$('.items ',this).height(highestBox);
+   		});
+
 	});// end ready
 
 })( jQuery );

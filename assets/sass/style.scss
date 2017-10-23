@@ -66,6 +66,7 @@ p {
 	font-family: 'Myriad pro';
 	display: flex;
 	justify-content: flex-start;
+	padding: 0 15px;
 }
 .top_info {
 	display: flex;
@@ -117,8 +118,7 @@ p {
 	background: #000;
 	width: 100%;
 	.logo_info {
-		.col-sm-4 {
-			padding-left: 0;
+		.logotip {
 
 			h1 {
 				color: #ffffff;
@@ -417,107 +417,173 @@ p {
 	.row {
 		padding: 0;
 		margin: 0;
-		li {
-			list-style: none;
-			padding:15px;
-			box-sizing: inherit;
-			ul {
-				list-style: none;
-				margin: 0;
-			}
-		}
 	}
-	.item2 {
-		@media (max-width: 768px) {
+	.testing {
+		padding-right: -15px;
+		display: flex;
+		@media (max-width: 779px){	
+				flex-flow: column;
+			}
+		.block {
+			position: relative;
 			width: 50%;
-			float: left;
+			max-height: 740px;
+			margin: 15px 15px 15px 0;
+			padding: 15px 0;
 
-		}
-	}
-	.flex-inner {
-		li {
-			padding: 0;
-		}
-	}
-	.item1_info {
-		position: absolute;
-		bottom:20px;
-		left: 30px;
-		h1 {
-			display: inline-block;
-			background: #ffffff;
-			font-size: 30px;
-			line-height: 40px;
-			text-transform: uppercase;
-			font-weight: bold;
-			margin-bottom: 10px;
-			@media (max-width: 989px) {
-				font-size: 20px;
+			@media (max-width: 779px){	
+				width: 100%;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+				
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.item1_info {
+				display: flex;
+				flex-flow: column;
+				position: absolute;
+				bottom: 30px;
+				left:20px;
+				h1 {
+					display: inline-block;
+					background: #ffffff;
+					font-size: 30px;
+					line-height: 40px;
+					text-transform: uppercase;
+					font-weight: bold;
+					margin-bottom: 10px;
+					@media (max-width: 989px) {
+						font-size: 20px;
+						@media (max-width: 779px) {
+							font-size: 30px;
+							@media (max-width: 500px) {
+							font-size: 20px;
+							}
+						}
+					}
+				}
 			}
 		}
-	}
-	.item2_info {
-		position: absolute;
-		bottom: 20px;
-		left: 15px;
-		@media (max-width: 989px) {
-			bottom: 0;
-		}
-		h2 {
-			line-height: 30px;
-		}
-
-	}
-	.accubuttons {
-		position: absolute;
-		bottom: 55px;
-		right: 10px;
-		@media (max-width: 989px) {
-			bottom: 85px;
-			left: 15px;
-		}
-	}
-	.item2_left_top {
-		padding-bottom: 15px;
-
-	}
-	.item2_right_top {
-		padding-bottom: 15px;
-		box-sizing: inherit;
-		.item2_info {
-			padding-bottom: 15px;
-		}
-
-	}
-	.item2_left_botom {
-		padding-top: 15px;
 		.box {
-			padding-bottom: 35%;
-			background: #000;
+			position: relative;
 		}
-		.accubuttons {
-			bottom: 40px;
-			@media (max-width: 989px) {
-				bottom: 70px;
+		.boxleft {
+			@media (max-width: 769px) {
+				display: flex;
+				flex-flow: row nowrap;
+			}
+			.item2_info {
+				@media (max-width: 769px) {
+					left: 15px;
+				}
+			}
+			.accubuttons {
+				right: 25px;
+				@media (max-width: 769px) {
+					left: 55%;
+					@media (max-width: 470px) {
+						left: 15px;
+					}
+				}
 			}
 		}
-	}
-	.item2_right_botom {
-		padding-top: 15px;
-		.accubuttons {
-			bottom: 40px;
-			@media (max-width: 989px) {
-				bottom: 70px;
+			
+		.item2_info {
+			position: absolute;
+			bottom: 20px;
+			left: 30px;
+			@media (max-width: 991px) {
+				bottom: 10px;
 			}
-		}
-	}
+			h2 {
+				line-height: 30px;
+			}
 
+		}
+		.accubuttons {
+			position: absolute;
+			bottom: 35px;
+			right: 10px;
+			@media (max-width: 991px) {
+				bottom: 85px;
+				left: 30px;
+				@media (max-width: 769px) {
+					bottom: 30px;
+					left: 60%;
+					@media (max-width:470px) {
+						left: 30px;
+						bottom: 85px;
+					}
+				}
+			}
+		}
+		.block1 {
+			position: relative;
+			padding: 0;
+			margin: 15px 0;
+			display: flex;
+			width: 50%;
+			max-height: 740px;
+
+			@media (max-width: 779px){	
+				width: 100%;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.podblock {
+
+				display: flex;
+				flex-flow: column;
+				width: 50%;
+				.box {
+					display: flex;
+					padding: 15px 0 15px
+					15px;
+					width: 100%;
+					height: 50%;
+					flex-flow: column;
+					box-sizing: border-box;
+				}
+				.boxleft {
+					padding-right: 15px;
+					@media (max-width: 769px){	
+						padding: 15px 15px 15px 0;
+					}
+				}
+				.box1 {
+					height: 100%;
+					background: #000;
+					.item2_info {
+						h2 {
+							color: #fff;
+						}
+						h3 {
+							color: #fff;
+						}
+					}
+					img {
+						height: 70%;
+					}
+				}
+			}
+		}
+	}
 	.tilter {
 		position: relative;
 		display: block;
 	}
 .item3 {
-	padding-top: 15px;
+	padding-top: 0;
 	padding-bottom: 15px;
 	li {
 		padding-top: 0;
@@ -529,6 +595,9 @@ p {
 	padding-bottom: 15px;
 	 @media (max-width: 989px) {
     	    padding-bottom: 30px;
+    	    @media (max-width: 769px) {
+    	   	 padding-top: 15px;
+    		}
     	}
 }
 .item3_2 {
@@ -920,7 +989,7 @@ p {
 
 				}
 			img {
-
+				object-fit: cover;
 			}
 			h3 {
 				text-transform: uppercase;
@@ -1139,6 +1208,9 @@ p {
 }
 .section-4 {
 	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 		@media (max-width: 576px){
 			width: 100%;
 	    }
@@ -1161,10 +1233,7 @@ p {
 		justify-content: center;
 		overflow: hidden;
 
-		img {
-			width: 100%;
-			height: 100%;
-		}
+
 
 		@media (max-width: 769px){
 			width: 100%;
@@ -1600,6 +1669,7 @@ footer {
 				}
 			}
 			.caption {
+				padding-left: 20px;
 				width:70%;
 				display: flex;
 				justify-content: flex-start;
